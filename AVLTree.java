@@ -184,12 +184,12 @@ public class AVLTree {
             node.key = fndNxt.key;
             delNode(fndNxt);
         } else {
-            Node child = node.right; // направо самый минимальный
-            while (child.left != null) {
-                child = child.left;
+            Node fndNxt = node.right; // направо самый минимальный
+            while (fndNxt.left != null) {
+                fndNxt = fndNxt.left;
             }
-            node.key = child.key;
-            delNode(child);
+            node.key = fndNxt.key;
+            delNode(fndNxt);
         }
     }
 
